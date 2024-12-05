@@ -13,6 +13,7 @@ public class Algorithms {
     private static Scanner y;
     private static Scanner a;
     private static Scanner b;
+    private static int[] nums = new int [1000];
     public static void main(String[] args) throws FileNotFoundException {
         f = new File("Numbers.txt");
         int odds = odds();
@@ -22,8 +23,7 @@ public class Algorithms {
         int greatest_value = greatest_value();
         int smallest_value = smallest_value();
         int sum = sum();
-        int avg = avg();
-        //int mode = mode();
+        double avg = avg();
         System.out.println(odds);
         System.out.println(evens);
         System.out.println(two_digits);
@@ -103,32 +103,39 @@ public class Algorithms {
         int sum = 0;
         while (y.hasNext()) {
             int i = y.nextInt();
-            if (y.nextInt() != 0)
+            if (i != 0)
                 sum = sum + i;
         }
         return sum;
     }
 
-    public static int avg() throws FileNotFoundException{
+    public static double avg() throws FileNotFoundException{
         a = new Scanner(f);
-        int avg = sum();
-        int tot = 0;
+        double avg = sum();
+        double total = 0;
         while (a.hasNext()) {
-            tot ++;
+            a.next();
+            total ++;
         }
-        avg = avg / tot;
+        avg = avg / total;
         return avg;
     }
 
-   // public static int mode() throws FileNotFoundException{
-   //     b = new Scanner(f);
-   //     int mode = 0;
-   //     int count = 0;
-   //     while (b.hasNext()) {
-   //         int i = b.nextInt();
-   //         for (nums in file)
-   //             int f = b.nextInt();
-   //             if (i == f) count ++;
+    // public static int mode() throws FileNotFoundException{
+    //     b = new Scanner(f);
+    //     int count = 0;
+    //     int num = 0;
+    //     // while (b.hasNext()) {
+    //     //     int next = b.nextInt();
+    //     //     if (next == )
+    //     // }
+    //     while (b.hasNext() && num != 1000) {
+    //         if ((int) nums [s.nextInt()] == num) count ++;
+    //             num++;
+    //     }
+    // }
 
-   // }
-}
+
+
+
+//150 298
